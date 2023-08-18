@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
   
   app.use("/api" , require('./routes/testRoute'))
 
-// app.use('/api', require('./routes/uploadRoute'))
+app.use('/api', require('./routes/uploadRoute'))
 
 
 
