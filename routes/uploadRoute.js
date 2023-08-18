@@ -1,6 +1,6 @@
 const router= require('express').Router() 
 const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
+const upload = multer();
 const cloudinary = require('cloudinary');
 
 cloudinary.config({
@@ -14,7 +14,7 @@ cloudinary.config({
 
 router.route('/upload').post(upload.single('file'),async(req, res) =>{
     try { 
-        console.log(req.file)
+    
       const upload = await cloudinary.v2.uploader.upload(req.file.path); 
       return res.json({
      id:upload.public_id,
