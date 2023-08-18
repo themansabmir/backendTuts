@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
     res.send("Express on Vercel");
   });
   
+  app.use("/api" , require('./routes/testRoute'))
 
 // app.use('/api', require('./routes/uploadRoute'))
 
