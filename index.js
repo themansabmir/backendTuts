@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   });
   
 
-app.use('/api', require('./routes/uploadRoute'))
+// app.use('/api', require('./routes/uploadRoute'))
 
 
 
@@ -34,3 +34,4 @@ app.listen(5000, () => {
     console.log(`Server Started at ${5000}`)
 })
 
+module.exports= app
