@@ -1,7 +1,9 @@
 const router= require('express').Router() 
 const multer = require("multer");
-const upload = multer();
 const cloudinary = require('cloudinary');
+const storage = multer.memoryStorage() 
+
+const upload= multer({storage}) ;
 
 cloudinary.config({
   cloud_name: 'dn5hq2s10',
